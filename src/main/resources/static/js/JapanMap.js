@@ -39,9 +39,11 @@ function createJapanMap(markerOptions = []) {
 
     // たぶん地図のスタイル
     // TODO: 地図のスタイルを変更する
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
+    L.tileLayer('https://{s}.tile.openstreetmap.jp/{z}/{x}/{y}.png', {
+        attribution: "&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors"
     }).addTo(map);
+
+
 
     // 3. マーカーの設置
     const markers = markerOptions.map((markerOption) => {
