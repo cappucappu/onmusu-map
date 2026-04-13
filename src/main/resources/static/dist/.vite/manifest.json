@@ -1,0 +1,12 @@
+{
+  "src/map.ts": {
+    "file": "map-bundle.js",
+    "name": "map",
+    "src": "src/map.ts",
+    "isEntry": true
+  },
+  "style.css": {
+    "file": "map-bundle.css",
+    "src": "style.css"
+  }
+}
