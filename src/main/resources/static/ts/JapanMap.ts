@@ -1,18 +1,4 @@
-import L from 'leaflet';
-// URLを直接書くのではなく、Viteにパスを解決させる
-import markerIcon from 'leaflet/dist/images/marker-icon.png';
-import markerIconRetina from 'leaflet/dist/images/marker-icon-2x.png';
-import markerShadow from 'leaflet/dist/images/marker-shadow.png';
-
-L.Icon.Default.mergeOptions({
-    iconUrl: markerIcon,
-    iconRetinaUrl: markerIconRetina,
-    shadowUrl: markerShadow,
-});
-
-// ベクタ地図を使うなら導入
-//import 'maplibre-gl';
-//import '@maplibre/maplibre-gl-leaflet';
+declare const L: typeof import('leaflet');
 
 /**
  * マーカー情報の型定義

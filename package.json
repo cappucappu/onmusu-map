@@ -1,0 +1,46 @@
+{
+  "name": "onmusumap",
+  "version": "1.0.0",
+  "description": "温泉むすめがいる温泉の場所を手軽に・正確に把握したい<br>\r 行った場所にフラグを立てたい<br>\r そんな想いのウェブアプリ（随意作成中）",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "earcut": "^3.0.2",
+    "gl-matrix": "^3.4.4",
+    "json-stringify-pretty-compact": "^4.0.0",
+    "kdbush": "^4.0.2",
+    "leaflet": "^1.9.4",
+    "maplibre-gl": "^5.22.0",
+    "minimist": "^1.2.8",
+    "murmurhash-js": "^1.0.0",
+    "pbf": "^4.0.1",
+    "potpack": "^2.1.0",
+    "protocol-buffers-schema": "^3.6.1",
+    "quickselect": "^3.0.0",
+    "resolve-protobuf-schema": "^2.1.0",
+    "rw": "^1.3.3",
+    "supercluster": "^8.0.1",
+    "tinyqueue": "^3.0.0",
+    "typescript": "^6.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cappucappu/onmusu-map.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cappucappu/onmusu-map/issues"
+  },
+  "homepage": "https://github.com/cappucappu/onmusu-map#readme",
+  "devDependencies": {
+    "@types/leaflet": "^1.9.21"
+  }
+}
