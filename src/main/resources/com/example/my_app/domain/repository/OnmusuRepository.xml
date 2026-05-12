@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.my_app.domain.repository.OnmusuRepository">
+
+    <!-- 全件検索 -->
+    <select id="selectAll"
+            resultType="com.example.my_app.infrastructure.entity.Onmusu">
+        SELECT *
+        FROM onmusu_markers
+            LEFT OUTER JOIN regions
+            ON (onmusu_markers.region_id = regions.region_id) AND (onmusu_markers.country_code = regions.country_code)
+                LEFT OUTER JOIN countries
+                on regions.country_code = countries.country_code
+    </select>
+
+</mapper>
