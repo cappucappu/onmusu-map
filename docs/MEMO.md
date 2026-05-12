@@ -41,8 +41,8 @@ erDiagram
     %% テーブル情報の定義
     onmusu_markers {
         uuid uuid PK "UUID"
-        double lat "緯度"
-        double lng "軽度"
+        numeric latitude "緯度"
+        numeric longitude "経度"
         string hot_springs "温泉名 マーカーのタイトルになる"
         string name_yomi"読み"
         string name "名前"
@@ -57,7 +57,7 @@ erDiagram
     
     %% 地域
     regions {
-        int id PK "ID"
+        int region_id PK "ID"
         string country_code PK,FK "国コード"
         string region_name "地域名"
     }
@@ -73,8 +73,8 @@ erDiagram
     custom_markers {
         uuid uuid PK "UUID"
         uuid user_uuid FK "users.uuidへの外部キー"
-        double lat "緯度"
-        double lng "軽度"
+        numeric latitude "緯度"
+        numeric longitude "経度"
         string title "マーカーのタイトル"
     }
     
