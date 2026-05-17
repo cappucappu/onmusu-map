@@ -125,6 +125,39 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>cz.habarta.typescript-generator</groupId>
+				<artifactId>typescript-generator-maven-plugin</artifactId>
+				<version>3.2.1263</version>
+				<executions>
+					<execution>
+						<id>generate</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<phase>compile</phase>
+					</execution>
+				</executions>
+				<configuration>
+					<jsonLibrary>jackson2</jsonLibrary>
+					<!-- 型変換の対象とするJavaクラス -->
+					<!--classPatterns>
+						<pattern>com.example.my_app.presentation.dto.*</pattern>
+					</classPatterns-->
+					<classes>
+						<!-- 変換対象のRecordクラスをフルパッケージ名で指定 -->
+						<class>com.example.my_app.presentation.dto.OnmusuResponse</class>
+					</classes>
+					<!-- 出力先ファイルパス（フロントエンドのソースディレクトリを指定） -->
+					<outputFile>src/main/resources/static/ts/models.d.ts</outputFile>
+					<outputKind>module</outputKind>
+					<outputFileType>declarationFile</outputFileType>
+					<mapEnum>asEnum</mapEnum>
+					<noFileComment>true</noFileComment>
+					<!-- JavaのDate系をJSのDateではなくstring（ISO8601）として扱う設定（推奨） -->
+					<mapDate>asString</mapDate>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
