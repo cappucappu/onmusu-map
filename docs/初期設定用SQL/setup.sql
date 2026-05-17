@@ -262,4 +262,4 @@ INSERT INTO onmusu_markers(latitude, longitude, hot_springs, name_yomi, name, im
 (31.2389, 130.6408, '指宿温泉', 'IBUSUKI ERINA', '指宿絵璃菜', '#ff69b4', '2000/6/1', 46, 'JP', '松田颯水', '竹花ノート', 'https://onsen-musume.jp/character/ibusuki_erina'),
 (31.8847, 130.8353, '霧島温泉', 'KIRISHIMA KUROE', '霧島黒恵', '#4c484c', '2000/11/7', 46, 'JP', '佐藤日向', '魔太郎', 'https://onsen-musume.jp/character/kirishima_kuroe'),
 (24.4178, 123.8219, '西表島温泉', 'IRIOMOTEJIMA YAEKA', '西表島八重夏', '#5bdeff', '2000/2/22', 47, 'JP', '田村響華', '茨乃', 'https://onsen-musume.jp/character/iriomotejima_yaeka'),
-(36.0272, 138.2325, '尖石温泉', 'JIANSHIH NEIWAN', '尖石内湾', '#c4f2f9', '2000/4/16', 1, 'TW', '安齋由香里', '佃煮のりお', 'https://onsen-musume.jp/character/jianshih_neiwan');
+(24.7061, 121.1969, '尖石温泉', 'JIANSHIH NEIWAN', '尖石内湾', '#c4f2f9', '2000/4/16', 1, 'TW', '安齋由香里', '佃煮のりお', 'https://onsen-musume.jp/character/jianshih_neiwan');
