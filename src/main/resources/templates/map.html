@@ -21,15 +21,14 @@
     <h1>観光スポットマップ</h1>
     <div id="map"></div>
 
+
     <script th:inline="javascript" type="module">
         import { createJapanMap } from '/js/JapanMap.js';
 
-        const markerOptions = [{
-            coords: [35.4, 139.4],
-            text: "テスト"
-        }]
+        const onmusuMarker = /*[[${onmusuMarkers}]]*/null;
 
-        createJapanMap(markerOptions)
+        createJapanMap(onmusuMarker)
+
     </script>
 </body>
 </html>

@@ -1,21 +1,15 @@
 declare const L: typeof import('leaflet');
 
-/**
- * マーカー情報の型定義
- */
-interface MarkerOption {
-    coords: [number, number]; // [緯度, 経度] のタプル型
-    text: string;
-}
+import {OnmusuResponse} from "./models";
 
 /**
  * id=mapのdiv要素に日本のマップを表示
  */
-export function createJapanMap(markerOptions: MarkerOption[] = []): void {
+export function createJapanMap(markerOptions: OnmusuResponse[] = []): void {
 
     // 固定値の定義
     const initialPosition: [number, number] = [36.0, 137.0]; // 東京の座標
-    const initialZoom: number = 5; //　初期ズーム
+    const initialZoom: number = 8; //　初期ズーム
     const minZoom: number = 5; // 最大縮小
 
     // 表示最大範囲
@@ -46,8 +40,9 @@ export function createJapanMap(markerOptions: MarkerOption[] = []): void {
     }).addTo(map);
 
     // マーカーの設置
-    markerOptions.map((option: MarkerOption): void => {
-        const marker: L.Marker = L.marker(option.coords).addTo(map);
-        marker.bindPopup(option.text);
+    markerOptions.map((option: OnmusuResponse): void => {
+
+        const marker: L.Marker = L.marker([option.latitude, option.longitude]).addTo(map);
+        marker.bindPopup(option.hotSprings);
     });
 }
