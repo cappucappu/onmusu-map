@@ -146,13 +146,9 @@
 				<configuration>
 					<jsonLibrary>jackson2</jsonLibrary>
 					<!-- 型変換の対象とするJavaクラス -->
-					<!--classPatterns>
-						<pattern>com.example.my_app.presentation.dto.*</pattern>
-					</classPatterns-->
-					<classes>
-						<!-- 変換対象のRecordクラスをフルパッケージ名で指定 -->
-						<class>com.example.my_app.presentation.dto.OnmusuResponse</class>
-					</classes>
+					<classPatterns>
+						<pattern>com.example.my_app.application.dto.*</pattern>
+					</classPatterns>
 					<!-- 出力先ファイルパス（フロントエンドのソースディレクトリを指定） -->
 					<outputFile>src/main/resources/static/ts/models.d.ts</outputFile>
 					<outputKind>module</outputKind>

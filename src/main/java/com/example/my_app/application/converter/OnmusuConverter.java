@@ -1,7 +1,7 @@
-package com.example.my_app.presentation.converter;
+package com.example.my_app.application.converter;
 
-import com.example.my_app.infrastructure.entity.Onmusu;
-import com.example.my_app.presentation.dto.OnmusuResponse;
+import com.example.my_app.domain.entity.Onmusu;
+import com.example.my_app.application.dto.OnmusuResponse;
 
 import java.util.List;
 

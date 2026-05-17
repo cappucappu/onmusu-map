@@ -1,10 +1,9 @@
-package com.example.my_app.application;
+package com.example.my_app.domain.service;
 
+import com.example.my_app.domain.entity.Onmusu;
 import com.example.my_app.infrastructure.mapper.OnmusuMapper;
-import com.example.my_app.infrastructure.entity.Onmusu;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -14,8 +13,7 @@ public class OnmusuService {
 
     private final OnmusuMapper onmusuMapper;
 
-    @Transactional(readOnly = true)
-    public List<Onmusu> getAllMarker() {
+    public List<Onmusu> getAll() {
         return onmusuMapper.selectAll();
     }
 

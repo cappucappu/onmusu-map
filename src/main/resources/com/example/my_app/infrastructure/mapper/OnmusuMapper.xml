@@ -4,7 +4,7 @@
 
     <!-- 全件検索 -->
     <select id="selectAll"
-            resultType="com.example.my_app.infrastructure.entity.Onmusu">
+            resultType="com.example.my_app.domain.entity.Onmusu">
         SELECT *
         FROM onmusu_markers
             LEFT OUTER JOIN regions
