@@ -51,11 +51,23 @@ export class Map {
     }
 
     public putMarker(markerList: OnmusuResponse[]) {
+
         // マーカーの設置
         markerList.map((option: OnmusuResponse): void => {
 
-            const marker: L.Marker = L.marker([option.latitude, option.longitude]).addTo(this.map);
-            marker.bindPopup(option.hotSprings);
+            const markerDiv = document.createElement("div");
+            markerDiv.classList.add("custom-marker");
+            markerDiv.style.setProperty("--border-color", option.imageColor);
+            markerDiv.textContent = option.hotSprings;
+
+            const customPin = L.divIcon({
+                html:markerDiv,
+                className: "custom-icon",
+                iconSize: [80, 40],
+                iconAnchor:[50, 40]
+            });
+
+            const marker: L.Marker = L.marker([option.latitude, option.longitude], {icon: customPin}).addTo(this.map);
         });
     }
 }
